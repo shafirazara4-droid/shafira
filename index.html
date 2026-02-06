@@ -3,115 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum Vitae - Lembayung Shafhira</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>CV | Lembayung Shafhira Az-zahrah</title>
     <style>
         :root {
-            --primary-color: #6a1b9a; /* Deep Purple */
-            --secondary-color: #f3e5f5; /* Light Purple Background */
-            --accent-color: #9c27b0; /* Bright Purple */
-            --text-color: #333;
+            --primary-purple: #6a1b9a;
+            --light-purple: #f3e5f5;
+            --accent-purple: #9c27b0;
+            --text-dark: #333;
         }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--secondary-color);
-            color: var(--text-color);
+            background-color: #f8f9fa;
             margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
+            padding: 0;
+            color: var(--text-dark);
+            line-height: 1.6;
         }
 
         .container {
             max-width: 800px;
-            background: white;
+            margin: 40px auto;
+            background: #fff;
             padding: 40px;
             border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            border-top: 10px solid var(--primary-color);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-top: 10px solid var(--primary-purple);
         }
 
         header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
 
         .profile-img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            border: 4px solid var(--primary-color);
             object-fit: cover;
+            border: 4px solid var(--primary-purple);
             margin-bottom: 15px;
         }
 
         h1 {
-            color: var(--primary-color);
+            color: var(--primary-purple);
             margin: 10px 0;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            font-size: 2rem;
         }
 
         .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            font-size: 0.9em;
-            margin-bottom: 20px;
+            font-size: 0.9rem;
+            color: #666;
         }
 
-        .contact-info span {
-            background: var(--primary-color);
-            color: white;
-            padding: 5px 12px;
-            border-radius: 20px;
-        }
-
-        section {
-            margin-bottom: 25px;
-        }
-
-        h2 {
-            border-left: 5px solid var(--accent-color);
-            padding-left: 10px;
-            color: var(--accent-color);
-            font-size: 1.2em;
+        .section-title {
+            color: var(--primary-purple);
+            border-left: 5px solid var(--accent-purple);
+            padding-left: 15px;
+            margin-top: 30px;
             margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: bold;
         }
 
-        .grid {
+        .grid-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
         }
 
         .card {
-            background: #fafafa;
+            background: var(--light-purple);
             padding: 15px;
             border-radius: 8px;
-            border-left: 3px solid #ddd;
-        }
-
-        .social-links a {
-            text-decoration: none;
-            color: var(--primary-color);
-            font-weight: bold;
-            margin-right: 15px;
         }
 
         ul {
-            padding-left: 20px;
+            list-style-type: none;
+            padding: 0;
         }
 
         li {
-            margin-bottom: 5px;
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        li::before {
+            content: "•";
+            color: var(--primary-purple);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .social-links a {
+            color: var(--primary-purple);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.8rem;
+            color: #999;
         }
 
         @media (max-width: 600px) {
-            .grid { grid-template-columns: 1fr; }
-            .container { padding: 20px; }
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+            .container {
+                margin: 10px;
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -119,29 +129,19 @@
 
 <div class="container">
     <header>
-        <img src="WhatsApp Image 2026-02-05 at 22.00.43.jpeg" alt="Foto Lembayung Shafhira" class="profile-img">
+        <img src="https://via.placeholder.com/150" alt="Foto Lembayung Shafhira" class="profile-img">
         <h1>Lembayung Shafhira Az-zahrah</h1>
-        <p><em>"Saya suka masak dan berdedikasi tinggi dalam setiap kegiatan."</em></p>
-        
         <div class="contact-info">
-            <span><i class="fas fa-phone"></i> 083853370591</span>
-            <span><i class="fas fa-calendar"></i> 20 Januari 2008</span>
-            <span><i class="fas fa-map-marker-alt"></i> Bandung, Jawa Barat</span>
+            📍 Kp Cijeruk desa bojongsari kec.bojongsoang kab.bandung jawa barat<br>
+            📞 083853370591 | 🎂 20 Januari 2008
         </div>
     </header>
 
-    <section>
-        <h2><i class="fas fa-user"></i> Tentang Diri</h2>
-        <p>Halo! Saya adalah pribadi yang aktif dan senang mencoba hal baru. Memiliki kegemaran di dapur (memasak) dan sangat menyukai olahraga renang.</p>
-    </section>
+    <h2 class="section-title">Tentang Diri</h2>
+    <p>Saya adalah seorang pelajar yang memiliki antusiasme tinggi dalam dunia kuliner. <strong>Saya sangat suka memasak</strong> dan selalu tertarik untuk mencoba resep-resep baru. Selain itu, saya pribadi yang aktif dan senang berolahraga.</p>
 
-    <div class="grid">
-        <section>
-            <h2><i class="fas fa-graduation-cap"></i> Pendidikan</h2>
-            <div class="card">
-                <strong>SDN Cijeruk 01</strong><br>
-                Lulus Tahun 2020
-            </div>
-            <br>
-            <div class="card">
-                <strong>SMPN 2 Baleendah</strong><br>
+    <div class="grid-container">
+        <div>
+            <h2 class="section-title">Pendidikan</h2>
+            <ul>
+                <li><strong>SDN Cijeruk 01</strong><br>Lulus Tahun
