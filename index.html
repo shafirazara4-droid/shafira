@@ -3,145 +3,282 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV | Lembayung Shafhira Az-zahrah</title>
+    <title>Curriculum Vitae | Lembayung Shafhira Az-zahrah</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-purple: #6a1b9a;
+            --secondary-purple: #9c27b0;
             --light-purple: #f3e5f5;
-            --accent-purple: #9c27b0;
-            --text-dark: #333;
+            --dark-purple: #4a148c;
+            --text-gray: #555;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f8f9fa;
-            margin: 0;
-            padding: 0;
-            color: var(--text-dark);
+            font-family: 'Poppins', sans-serif;
+            background-color: #fdfbff;
+            color: #333;
             line-height: 1.6;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 40px auto;
-            background: #fff;
-            padding: 40px;
-            border-radius: 15px;
+            background: var(--white);
+            display: flex;
+            flex-wrap: wrap;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border-top: 10px solid var(--primary-purple);
+            border-radius: 20px;
+            overflow: hidden;
         }
 
-        header {
+        /* Sidebar Kiri */
+        .sidebar {
+            flex: 1 1 300px;
+            background-color: var(--primary-purple);
+            color: var(--white);
+            padding: 40px 30px;
+        }
+
+        .profile-img-container {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         .profile-img {
-            width: 150px;
-            height: 150px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
+            border: 5px solid rgba(255, 255, 255, 0.2);
             object-fit: cover;
-            border: 4px solid var(--primary-purple);
+            background-color: var(--light-purple);
+        }
+
+        .sidebar h2 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             margin-bottom: 15px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            display: inline-block;
+            padding-bottom: 5px;
         }
 
-        h1 {
-            color: var(--primary-purple);
-            margin: 10px 0;
-            font-size: 2rem;
+        .info-item {
+            margin-bottom: 20px;
         }
 
-        .contact-info {
+        .info-item p {
             font-size: 0.9rem;
-            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .social-link {
+            display: block;
+            color: var(--light-purple);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            transition: 0.3s;
+        }
+
+        .social-link:hover {
+            color: var(--white);
+            padding-left: 5px;
+        }
+
+        /* Konten Utama Kanan */
+        .main-content {
+            flex: 2 1 500px;
+            padding: 40px;
+            background: var(--white);
+        }
+
+        .header-main h1 {
+            color: var(--dark-purple);
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+
+        .header-main .title {
+            color: var(--secondary-purple);
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .section {
+            margin-bottom: 30px;
         }
 
         .section-title {
             color: var(--primary-purple);
-            border-left: 5px solid var(--accent-purple);
-            padding-left: 15px;
-            margin-top: 30px;
+            font-size: 1.3rem;
             margin-bottom: 15px;
-            text-transform: uppercase;
-            font-weight: bold;
+            display: flex;
+            align-items: center;
         }
 
-        .grid-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .card {
+        .section-title::after {
+            content: "";
+            flex: 1;
+            height: 2px;
             background: var(--light-purple);
-            padding: 15px;
-            border-radius: 8px;
+            margin-left: 15px;
         }
 
-        ul {
-            list-style-type: none;
-            padding: 0;
+        .item {
+            margin-bottom: 15px;
         }
 
-        li {
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+            color: #444;
+        }
+
+        .item-sub {
+            color: var(--secondary-purple);
+            font-size: 0.9rem;
+        }
+
+        .list-unstyled {
+            list-style: none;
+        }
+
+        .skill-badge {
+            display: inline-block;
+            background: var(--light-purple);
+            color: var(--dark-purple);
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-right: 10px;
             margin-bottom: 10px;
-            padding-left: 20px;
-            position: relative;
+            font-size: 0.9rem;
+            font-weight: 500;
         }
 
-        li::before {
-            content: "•";
-            color: var(--primary-purple);
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-
-        .social-links a {
-            color: var(--primary-purple);
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .social-links a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            font-size: 0.8rem;
-            color: #999;
-        }
-
-        @media (max-width: 600px) {
-            .grid-container {
-                grid-template-columns: 1fr;
-            }
+        /* Responsive */
+        @media (max-width: 768px) {
             .container {
-                margin: 10px;
-                padding: 20px;
+                margin: 0;
+                border-radius: 0;
+            }
+            .sidebar {
+                text-align: center;
+            }
+            .section-title::after {
+                display: none;
             }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <header>
-        <img src="https://via.placeholder.com/150" alt="Foto Lembayung Shafhira" class="profile-img">
-        <h1>Lembayung Shafhira Az-zahrah</h1>
-        <div class="contact-info">
-            📍 Kp Cijeruk desa bojongsari kec.bojongsoang kab.bandung jawa barat<br>
-            📞 083853370591 | 🎂 20 Januari 2008
+    <div class="container">
+        <!-- Bagian Samping (Profil & Kontak) -->
+        <div class="sidebar">
+            <div class="profile-img-container">
+                <!-- Placeholder untuk foto diri -->
+                <img src="WhatsApp Image 2026-02-05 at 22.00.43 (1).jpeg" alt="Foto Lembayung Shafhira" class="profile-img">
+            </div>
+
+            <div class="info-item">
+                <h2>Kontak</h2>
+                <p>📞 083853370591</p>
+                <p>📍 Kp Cijeruk desa bojongsari kec.bojongsoang kab.bandung jawa barat</p>
+            </div>
+
+            <div class="info-item">
+                <h2>Data Pribadi</h2>
+                <p>🗓️ 20 Januari 2008</p>
+                <p>🗣️ Bahasa Indonesia</p>
+            </div>
+
+            <div class="info-item">
+                <h2>Media Sosial</h2>
+                <a href="https://instagram.com/shfirazara_" class="social-link" target="_blank">Instagram: @shfirazara_</a>
+                <a href="https://tiktok.com/@piraajara" class="social-link" target="_blank">TikTok: @piraajara</a>
+            </div>
+
+            <div class="info-item">
+                <h2>Hobby</h2>
+                <p>🏊 Renang</p>
+            </div>
         </div>
-    </header>
 
-    <h2 class="section-title">Tentang Diri</h2>
-    <p>Saya adalah seorang pelajar yang memiliki antusiasme tinggi dalam dunia kuliner. <strong>Saya sangat suka memasak</strong> dan selalu tertarik untuk mencoba resep-resep baru. Selain itu, saya pribadi yang aktif dan senang berolahraga.</p>
+        <!-- Bagian Utama -->
+        <div class="main-content">
+            <header class="header-main">
+                <h1>Lembayung Shafhira Az-zahrah</h1>
+                <p class="title">Pelajar & Culinary Enthusiast</p>
+            </header>
 
-    <div class="grid-container">
-        <div>
-            <h2 class="section-title">Pendidikan</h2>
-            <ul>
-                <li><strong>SDN Cijeruk 01</strong><br>Lulus Tahun
+            <div class="section">
+                <h3 class="section-title">Tentang Diri</h3>
+                <p>Halo! Saya adalah pribadi yang aktif dan penuh semangat. Saya sangat memiliki minat di bidang kuliner dan <strong>saya sangat suka memasak</strong>. Selain itu, saya juga aktif berolahraga untuk menjaga kebugaran tubuh.</p>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Pendidikan</h3>
+                <div class="item">
+                    <div class="item-header">
+                        <span>SMA KP Baleendah</span>
+                        <span>Lulus 2026</span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-header">
+                        <span>SMPN 2 Baleendah</span>
+                        <span>Lulus 2023</span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-header">
+                        <span>SDN Cijeruk 01</span>
+                        <span>Lulus 2020</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Keahlian</h3>
+                <span class="skill-badge">Berenang</span>
+                <span class="skill-badge">Memasak</span>
+                <span class="skill-badge">Komunikasi Dasar</span>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Pengalaman Organisasi</h3>
+                <div class="item">
+                    <div class="item-header"><span>Ekskul Volly</span></div>
+                    <div class="item-sub">SMPN 2 Baleendah</div>
+                </div>
+                <div class="item">
+                    <div class="item-header"><span>Pramuka</span></div>
+                    <div class="item-sub">SDN Cijeruk 01</div>
+                </div>
+                <div class="item">
+                    <div class="item-header"><span>SMA</span></div>
+                    <div class="item-sub">-</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Sertifikat</h3>
+                <p style="color: #999; font-style: italic;">Belum ada sertifikat yang dicantumkan.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
